@@ -8,9 +8,12 @@
         <p class="small">Enter your phone number and confirm the PIN code</p>
         
         <div class="login-form d-flex flex-column gap-3">
-            <input type="text" class="form-control form-control-lg py-2 fs-6 border-2 border-warning rounded-pill" placeholder="Phone Number">
+            <input type="text" class="form-control form-control-lg py-2 fs-6 border-2 border-warning rounded-pill" placeholder="Phone Number" [(ngModel)]="phoneNumber">
             <div class="login-form d-flex gap-2">
-                <button type="button" class="btn btn-dark w-100 form-control-lg py-2 fs-6 rounded-pill">Continue</button>
+                <button type="button" class="btn btn-dark w-100 form-control-lg py-2 fs-6 rounded-pill" (click)="onSubmit()" [disabled]="isLoading">
+                    <span *ngIf="!isLoading">Continue</span>
+                    <span *ngIf="isLoading">Loading...</span>
+                </button>
             </div>
             <p class="small text-center">2.3 SAR/Daily for LEBARA, 1.5 SAR/Daily for VIRGIN AND 3.45 SAR/Daily (VAT INCLUDED) for MOBILY (Auto Renewal)</p>
             
