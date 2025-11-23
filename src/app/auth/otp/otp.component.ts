@@ -21,7 +21,7 @@ export class OtpComponent implements AfterViewInit {
   isLoading = false;
   
   // Data from login component
-  private msisdn = '';
+  msisdn = '';
   private service = '';
   private pubId = '';
   private clickId = '';
