@@ -22,3 +22,13 @@
 .webt-icon img{
 	width: 100%;
 }
+
+@media (max-width: 575.98px) {
+    .login-wrapper{
+        display: block;
+        padding-top: 30vh;
+    }
+    .bottom-text{
+        margin-top: 30vh;
+    }
+}
